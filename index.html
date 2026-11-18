@@ -44,11 +44,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .nav-cta{text-decoration:none;background:var(--blue);color:#fff;padding:10px 18px;border-radius:10px;font-size:14px;font-weight:600;white-space:nowrap}
 @media(max-width:780px){.nav-links{display:none}}
 
-/* HERO — stacked: cropped portrait on top, text below */
-.hero{padding-block:44px 64px}
-.hero-inner{display:flex;flex-direction:column;gap:30px;max-width:860px}
-.hero-photo{width:100%;max-width:540px;border-radius:22px;overflow:hidden;border:1px solid var(--glass-line);box-shadow:0 24px 60px -30px rgba(20,50,130,.5);background:#dfeaff}
-.hero-photo img{width:100%;height:auto;aspect-ratio:16/8;object-fit:cover;object-position:50% 12%;display:block}
+/* HERO — photo beside text */
+.hero{padding-block:48px 68px}
+.hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero-photo{width:100%;border-radius:22px;overflow:hidden;border:1px solid var(--glass-line);box-shadow:0 24px 60px -30px rgba(20,50,130,.5);background:#dfeaff}
+.hero-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 8%;display:block}
+@media(max-width:820px){.hero-inner{grid-template-columns:1fr;gap:28px}.hero-photo{max-width:420px}}
 .status{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--good);margin-bottom:6px}
 .dot{width:9px;height:9px;border-radius:50%;background:var(--good);box-shadow:0 0 0 0 rgba(15,158,96,.5);animation:pulse 2.4s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(15,158,96,.45)}70%{box-shadow:0 0 0 12px transparent}100%{box-shadow:0 0 0 0 transparent}}
@@ -179,9 +180,6 @@ footer{padding-block:38px;text-align:center;color:var(--mute-dim);font-size:13px
 
 <header class="hero"><div class="wrap">
   <div class="hero-inner">
-    <div class="hero-photo">
-      <img src="photo.png" alt="Portrait of Kit Brian Hernandez" width="540" height="236">
-    </div>
     <div>
       <div class="status"><span class="dot"></span>Available for Amazon seller accounts</div>
       <h1>I help Amazon sellers reduce stockouts &amp;<b>optimize PPC.</b></h1>
@@ -196,6 +194,9 @@ footer{padding-block:38px;text-align:center;color:var(--mute-dim);font-size:13px
           Download CV
         </a>
       </div>
+    </div>
+    <div class="hero-photo">
+      <img src="photo.png" alt="Portrait of Kit Brian Hernandez" width="440" height="550">
     </div>
   </div>
 </div></header>
@@ -213,12 +214,12 @@ footer{padding-block:38px;text-align:center;color:var(--mute-dim);font-size:13px
 </div></section>
 
 <section class="metrics"><div class="wrap" style="padding-block:0">
-  <div class="eyebrow">Results — Steyda / Hali Design AB, 2026</div>
+  <div class="eyebrow">Results — Swedish Candy Brand Store, 2026</div>
   <div class="metrics-grid">
     <div class="glass metric"><div class="num">31<span>%→</span>27<span>%</span></div><div class="lab">ACOS held down while scaling ad spend ~4× (Aug–Oct)</div></div>
     <div class="glass metric"><div class="num">~12<span>%</span></div><div class="lab">Average TACoS maintained through the launch ramp</div></div>
     <div class="glass metric"><div class="num">$117<span>K</span></div><div class="lab">Profit managed on $243K sales over 6 months</div></div>
-    <div class="glass metric"><div class="num">100<span>%</span></div><div class="lab">Year-end inventory accuracy, two years running</div></div>
+    <div class="glass metric"><div class="num">3</div><div class="lab">Amazon marketplaces managed — US · Canada · Mexico</div></div>
   </div>
 </div></section>
 
